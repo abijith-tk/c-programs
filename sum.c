@@ -10,7 +10,7 @@ int main()
  printf("Num2=");
  scanf("%d",&num2);
  product=num1*num2;
- if(product<1000)
+ if(product<=1000)
  {
   printf("Product=%d",product);
  }
