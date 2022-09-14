@@ -4,7 +4,7 @@
 
 int main()
 {
- int current,previous,sum;
+ int sum;
  for(int i=1;i<=10;i++)
  {
  /* current=i;
