@@ -20,8 +20,8 @@ int main()
 // of rows in Matrix 2 are equal 
 
     if(col1==row2) 
-    {
-        int res[row1][col2];
+    {     
+        // reading matrix elements 
         printf("Enter Matrix 1 elements\n");
         for(int i=0;i<row1;i++)
         {
@@ -57,7 +57,32 @@ int main()
             printf("%d\t",matrix2[i][j]);
           }
           printf("\n");
-        }   
+        }  
+        
+        // performing multiplication
+
+        int res[row1][col2]; // creating result matrix
+        for(int i=0;i<row1;i++)
+        {
+          for(int j=0;j<col2;j++)
+          {
+            int sum=0;
+            for(int k=0;k<col1;k++)
+            {
+              sum=sum+(matrix1[i][k]*matrix2[k][j]);
+            }
+            res[i][j]=sum;
+          }
+        }
+        printf("\nThe resultant matrix is\n");
+        for(int i=0;i<row1;i++)
+        {
+          for(int j=0;j<col2;j++)
+          {
+            printf("%d\t",res[i][j]);
+          }
+          printf("\n");
+        }
       }
     else{
            printf("Matrix multiplication not possible ");
