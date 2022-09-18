@@ -1,5 +1,6 @@
 #include<stdio.h>
 
+// program to perform matrix multiplication
 int main()
 {
     int matrix1[20][20],matrix2[20][20];
@@ -15,10 +16,9 @@ int main()
     printf("Col 2:");
     scanf("%d",&col2);
     
-// Matrix multiplication is possible only if 
-// number of columns in Matrix 1 and number
-// of rows in Matrix 2 are equal 
-
+/* Matrix multiplication is possible only if 
+   number of columns in Matrix 1 and number
+   of rows in Matrix 2 are equal */
     if(col1==row2) 
     {     
         // reading matrix elements 
