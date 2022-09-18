@@ -1,7 +1,7 @@
 #include<stdio.h>
 
 // sum from 1 to a given number
-
+// sum=(n*(n+1))/2
 int main()
 {
  int number,sum;
