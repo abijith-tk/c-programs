@@ -26,7 +26,7 @@ int main()
     scanf("%d",&pos);
     
     // swapping elements to place new element at the position
-    if(pos>=0||pos<size)
+    if(pos>=0 && pos<size)
     {
         for(int i=size-1; i>pos; i--)
         {
