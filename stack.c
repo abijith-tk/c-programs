@@ -1,59 +1,54 @@
 #include<stdio.h>
 
-// implementaion of stack using arrays
+// implemenation of stack using arrays
+
 int main()
 {
- int size,element,choice;
- int stack[100],top=-1;
- printf("Enter the size of the stack:");
+ int top=-1,size,ele,choice;
+ int stack[100];
+ printf("Enter the size of the queue:");
  scanf("%d",&size);
- int ch=1;
- while(ch!=0)
- { 
-  printf("\nSTACK OPERATIONS\n1.push()\n2.pop()\n3.display()\nEnter your choice:");
+ int con=1;
+ while(con==1)
+ {
+  printf("\n1.Insert\n2.Delete\nEnter your choice : ");
   scanf("%d",&choice);
   switch(choice)
   {
-   case 1: printf("Enter the element to be inserted:");
-          scanf("%d",&element);
-          top++;
-          if(top>=0&&top<size)
+   case 1: if(top<size-1)
           {
-           stack[top]=element;
-           top++;
-          }
-          else{
-           printf("Stack overflow\n");
-          }
-          break;
-          
-   case 2:if(top<0)
-          {
-           printf("Stack underflow");
-          }
-          else{
-           printf("The last element is removed");
-           top--;
-          }
-          break;
-          
-   case 3: if(top>=0)
-          {
-           printf("\nThe stack is\n");
-           for(int i=0;i<top;i++)
+           top=top+1;
+           printf("Enter the element to be inserted: ");
+           scanf("%d",&ele);
+           stack[top]=ele;
+           printf("\nStack after push operation\n");
+           for(int i=0;i<=top;i++)
            {
             printf("%d\t",stack[i]);
            }
           }
           else{
-           printf("The stack is empty");
+           printf("\nStack overflow\n");
           }
-          break;
-   default:printf("Invalid choice");
- }
- printf("\nPress 0 to exit otherwise 1->");
- scanf("%d",&ch);
+       break;
+   case 2:if(top>-1 && top<size)
+  	 {
+          top=top-1;
+          printf("Stack after pop operation\n");
+          for(int i=0;i<=top;i++)
+          {
+           printf("%d\t",stack[i]);
+          }
+         }
+         else{
+          printf("\nStack underflow\n");
+         }
+       break;
+   default:printf("\nInvalid choice\n");
+  }
+  printf("\nEnter 0 to exit or 1 to continue:");
+  scanf("%d",&con);
+  printf("\n"); 
  }
  return 0;
 }
-
