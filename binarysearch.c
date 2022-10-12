@@ -7,7 +7,8 @@
  step 3: if step 2 is print element found at the position mid
  step 4: else check mid element is less than or greater than the search item
  step 5: if it is less than mid element neglect the right parts
- ......................................
+ step 6: else the left part. repeaf these steps until the element is found  
+         or until there is no element remaining to check 
 */
 int main()
 {
