@@ -1,4 +1,14 @@
 #include<stdio.h>
+
+/*
+ binary search : performed only on sorted arrays.
+ step 1: find the mid of the array
+ step 2: check mid element is equal to the search item or not
+ step 3: if step 2 is print element found at the position mid
+ step 4: else check mid element is less than or greater than the search item
+ step 5: if it is less than mid element neglect the right parts
+ ......................................
+*/
 int main()
 {
  int array[20],size,ele,start,end,mid,flag=0;
