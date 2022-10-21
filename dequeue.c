@@ -22,25 +22,38 @@ int main()
              printf("Enter the element to insert : ");
              scanf("%d",&ele);
              dequeue[front]=ele;
-             printf("After insertion");
+             printf("After insertion\n");
              printf("%d",dequeue[0]); 
             }
-            else if(front<rear)
+            else if(front<=rear && rear < size-1 ) 
             {
-             front++;
+             for(int i=rear;i>=front;i--)
+             {
+              dequeue[i+1]=dequeue[i];
+             }
+             rear++;
              printf("Enter the element to insert : ");
              scanf("%d",&ele);
              dequeue[front]=ele;
-             printf("After insertion");
+             printf("\nAfter insertion\n");
              for(int i=front;i<=rear;i++)
              {
               printf("%d\t",dequeue[i]);
              }
             }
+            else{
+             printf("Queue is full\n");
+            }
             break;
-   case 2 : if(rear<size-1)
+   case 2 : if(front<=rear && rear<size-1)
             {
+             if(rear == -1 && front == -1)
+             { 
+              front = rear = 0;
+             }
+             else{
              rear++;
+             }
              printf("Enter the element to insert : ");
              scanf("%d",&ele);
              dequeue[rear]=ele;
