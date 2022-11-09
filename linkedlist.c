@@ -93,8 +93,9 @@ int main()
  int con=1;
  while(con!=0)
  {
+   printf("linked list operations");
    printf("\n1.Insert at beginning\n2.Insert at end\n3.Delete from beginning\n4.Delete from   end\n5.Display\n");
-  printf("Enter your choice : ");
+  printf("\nEnter your choice : ");
   scanf("%d",&choice);
   switch(choice)
   {
@@ -112,9 +113,9 @@ int main()
    	  break;
    case 5:display();
           break;
-   default: printf("Invalid choice");
+   default: printf("Invalid choice\n");
   }
-  printf("Enter 0 to exit: ");
+  printf("\nEnter 0 to exit: ");
   scanf("%d",&con);
  } 
  return 0;
