@@ -13,9 +13,9 @@ void insert_beg(int ele)
  temp=(struct node *)malloc(sizeof(struct node));
  if(head==NULL)
  {
-  head=temp;
-  temp->next=NULL;
   temp->value=ele;
+  temp->next=NULL;
+  current = head = temp;
  }
  else{
   temp->value=ele;
@@ -35,7 +35,7 @@ void insert_end(int ele)
   current=head=temp;
  }
  else{
-  current->next=NULL;
+  current->next=temp;
   current=current->next;
  }
 }
@@ -61,8 +61,8 @@ void delete_end()
   printf("\nLinked list is empty\n");
  }
  else{
-  for(curr=head;curr->next!=NULL;curr=curr->next)
-  curr->next=NULL;
+  for(curr=head, current = NULL;curr->next!=NULL;current = curr,curr=curr->next);
+  current->next=NULL;
  }
 }
 
