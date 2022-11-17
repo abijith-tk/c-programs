@@ -21,7 +21,7 @@ int main()
                 scanf("%d",&arr[i]);
 
         }
-
+        // Beginning of sorting 
         for(int i=0;i<size;i++)
 
         {
@@ -29,7 +29,7 @@ int main()
                 for(int j=0;j<size-1;j++)
 
                 {
-
+                        // Comparing adjacent elements 
                         if(arr[j]>arr[j+1])
 
                         {
