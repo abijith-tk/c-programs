@@ -1,5 +1,6 @@
 #include<stdio.h>
 
+// Check whether a number is Prime or Not using recursion 
 int isprime(int ele,int i)
 {
  if(ele<=1)
