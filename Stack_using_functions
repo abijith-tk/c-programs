@@ -1,8 +1,9 @@
 #include<stdio.h>
 #define MAX 50
-int stack[MAX];
+int stack[MAX];   // creating stack 
 int top=-1;
 
+// Function to insert elements 
 int push(int ele)
 {
  if(top<MAX)
@@ -20,6 +21,7 @@ int push(int ele)
  }
 }
 
+//Function to remove element 
 int pop()
 {
  top--;
