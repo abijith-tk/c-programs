@@ -1,3 +1,3 @@
-# ds-lab
+# C programs 
 
-Data structures lab programs 
+Set of some C programs 
